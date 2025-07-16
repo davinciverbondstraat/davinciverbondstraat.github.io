@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tekst kopiëren</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    textarea { width: 100%; height: 300px; }
+    button { padding: 10px 20px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h2>Druk op de knop om de tekst te kopiëren:</h2>
+  <textarea id="myText" readonly>Hier komt jouw tekst van 1000 woorden...</textarea><br><br>
+  <button onclick="copyText()">Kopieer naar klembord</button>
+
+  <script>
+    function copyText() {
+      const textArea = document.getElementById("myText");
+      textArea.select();
+      document.execCommand("copy");
+      alert("Tekst gekopieerd naar het klembord!");
+    }
+  </script>
+</body>
+</html>
