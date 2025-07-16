@@ -4,15 +4,34 @@
   <meta charset="UTF-8">
   <title>Tekst kopiëren</title>
   <style>
-    body { font-family: sans-serif; margin: 2em; }
-    textarea { width: 100%; height: 300px; }
-    button { padding: 10px 20px; font-size: 16px; }
+    body {
+      font-family: sans-serif;
+      margin: 2em;
+      max-width: 1000px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-bottom: 1em;
+    }
+
+    textarea {
+      width: 100%;
+      height: 600px; /* Veel groter voor volledige zichtbaarheid */
+      font-size: 16px;
+      line-height: 1.4;
+      resize: vertical;
+    }
   </style>
 </head>
 <body>
-  <h2>Druk op de knop om de tekst te kopiëren:</h2>
-  <textarea id="myText" readonly>De in het project voorziene parkeerplaatsen volstaan geenszins om tegemoet te komen aan de te verwachten parkeerbehoefte voortvloeiend uit de realisatie van 34 nieuwe wooneenheden, waarvan mag worden aangenomen dat een aanzienlijk deel zal worden bewoond door gezinnen met twee voertuigen. Daarenboven zal een deel van de voorziene parkeerplaatsen vermoedelijk worden ingenomen door andere buurtbewoners, hetgeen de beschikbare capaciteit verder beperkt. Bovendien zal de sporthal, conform de huidige plannen, ook ’s avonds voor publiek gebruik worden opengesteld, hetgeen bijkomende verkeersstromen en parkeerdruk met zich meebrengt. Gelet op deze elementen dient te worden vastgesteld dat het project een disproportionele en negatieve impact zal hebben op de reeds bestaande en structurele parkeerproblematiek in de omliggende woonomgeving.</textarea><br><br>
-  <button onclick="copyText()">Kopieer naar klembord</button>
+  <h2>Druk op de knop om de tekst te kopiëren naar je klembord.</h2>
+  <button onclick="copyText()">Kopieer naar klembord</button><br>
+  <h2>Hierna kan je dit plakken in de aanvraag (op telefoon: door lang op dat invoerveld te duwen en dan 'Plakken' of 'Paste' te kiezen )</h2>
+  <textarea id="myText" readonly>
+De in het project voorziene parkeerplaatsen volstaan geenszins om tegemoet te komen aan de te verwachten parkeerbehoefte voortvloeiend uit de realisatie van 34 nieuwe wooneenheden, waarvan mag worden aangenomen dat een aanzienlijk deel zal worden bewoond door gezinnen met twee voertuigen. Daarenboven zal een deel van de voorziene parkeerplaatsen vermoedelijk worden ingenomen door andere buurtbewoners, hetgeen de beschikbare capaciteit verder beperkt. Bovendien zal de sporthal, conform de huidige plannen, ook ’s avonds voor publiek gebruik worden opengesteld, hetgeen bijkomende verkeersstromen en parkeerdruk met zich meebrengt. Gelet op deze elementen dient te worden vastgesteld dat het project een disproportionele en negatieve impact zal hebben op de reeds bestaande en structurele parkeerproblematiek in de omliggende woonomgeving.
+  </textarea>
 
   <script>
     function copyText() {
